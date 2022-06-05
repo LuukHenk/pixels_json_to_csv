@@ -15,8 +15,6 @@ Now you can use the 'pixels_json_to_csv' function in the pixels_json_to_csv.py f
 
 ```
 # Python3 example
-
 from pixels_json_to_csv.pixels_json_to_csv import pixels_json_to_csv
-
 pixels_json_to_csv(json_file_path="json/file/path.json", csv_file_path="csv/file/path.csv")
 ```
