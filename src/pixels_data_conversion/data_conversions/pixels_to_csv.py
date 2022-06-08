@@ -5,8 +5,8 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Dict, List, Set
 
-from lib.models.pixel import Pixel  # pylint:disable=no-name-in-module
-from lib.utils.file_handling import write_file
+from pixels_data_conversion.models.pixel import Pixel
+from pixels_data_conversion.utils.file_handling import write_file
 
 
 def pixels_to_csv(pixels: List[Pixel], csv_file_path: Path) -> None:

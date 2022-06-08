@@ -3,8 +3,8 @@
 from pathlib import Path
 from typing import Dict, List
 
-from lib.utils.file_handling import load_json
-from lib.models.pixel import Pixel, Tag  # pylint:disable=no-name-in-module
+from pixels_data_conversion.utils.file_handling import load_json
+from pixels_data_conversion.models.pixel import Pixel, Tag
 
 
 def json_file_to_pixels(file_path: Path) -> List[Pixel]:
