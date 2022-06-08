@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: pixels-data-conversion-LuukHenk
-Version: 0.1.3
+Version: 0.1.5
 Summary: A tool for converting Pixels json data to other formats
 Home-page: https://github.com/LuukHenk/pixels_json_to_csv
 Author: LuukHenk

@@ -9,15 +9,15 @@ from pixels_data_conversion.data_conversions.json_file_to_pixels import (
     json_file_to_pixels,
 )
 from pixels_data_conversion.data_conversions.pixels_to_csv import pixels_to_csv
-from pixels_data_conversion.utils.file_handling import validate_file, update_file_suffix
+from pixels_data_conversion.utils.file_handling import validate_file, replace_suffix
 
 JSON_SUFFIX = ".json"
 CSV_SUFFIX = ".csv"
 
 
 def pixels_json_to_csv(
-    json_file_path: Union[Path, str],  # pylint:disable=bad-continuation
-    csv_file_path: Optional[Union[Path, str]] = None,  # pylint:disable=bad-continuation
+    json_file_path: Union[Path, str],
+    csv_file_path: Optional[Union[Path, str]] = None,
 ):
     """Convert a complex pixels json file to a csv file
     Arg - json_file_path (Path): The path to the json file to be loaded
@@ -31,6 +31,10 @@ def pixels_json_to_csv(
     csv_file_path = (
         Path(csv_file_path)
         if csv_file_path
-        else update_file_suffix(json_file_path, CSV_SUFFIX)
+        else replace_suffix(json_file_path, CSV_SUFFIX)
     )
     pixels_to_csv(json_file_to_pixels(json_file_path), csv_file_path)
+
+
+if __name__ == "__main__":
+    pixels_json_to_csv("../../data/input_pixel_example.json")

@@ -8,7 +8,7 @@ def load_json(file_path: Path) -> any:
     """Loads a json file
     Arg - file_path (Path): The path to the json file
     """
-    with open(file_path) as json_file:
+    with open(file_path, "r") as json_file:
         data = load(json_file)
     return data
 
@@ -35,9 +35,9 @@ def validate_file(file_path: Path, expected_suffix: str) -> None:
         raise ValueError(f"File {file_path} must be of type {expected_suffix}")
 
 
-def update_file_suffix(file_path: Path, new_suffix: str) -> Path:
+def replace_suffix(file_path: Path, new_suffix: str) -> Path:
     """Replaces the file path its suffix with the new suffix
     Arg - file_path (Path): The file path
     Returns (Path): The file path with a new suffix
     """
-    return file_path.rename(file_path.with_suffix(new_suffix))
+    return file_path.parent / Path(f"{file_path.stem}{new_suffix}")
