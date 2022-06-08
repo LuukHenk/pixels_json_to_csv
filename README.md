@@ -1,4 +1,5 @@
-# Pixels data conversions
+# Pixels json to csv
 
 Tool that converts the exported pixels of [Pixels v4.3.2](https://teovogel.me/pixels/)
-to other formats. Currently the only conversion format is pixels json to csv
+to a simplified csv file
+
